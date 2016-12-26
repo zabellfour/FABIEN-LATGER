@@ -82,7 +82,8 @@
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            line-height: 1.2;max-width: 100%;
+            line-height: 1.2;
+            max-width: 100%;
             @include media('<desktop') {
                 padding: 10px;
                 font-size: 15px;
@@ -103,12 +104,9 @@
             p {
                 margin-bottom: 38px;
                 max-width: 100%;
-                 @include media('<desktop') {
-                         margin-bottom: 15px;
-                 
-                 }
-                			
-       
+                @include media('<desktop') {
+                    margin-bottom: 15px;
+                }
             }
         }
         &:hover {
@@ -130,5 +128,21 @@
 .sh-holder {
     @include media('<tablet') {
         height: auto !important;
+    }
+}
+
+.bg-pos2 {
+    position: relative;
+    overflow: hidden;
+    .img1 {
+        position: absolute;
+        top: 88px;
+        left: -12.5%;
+        right: 0;
+        bottom: 0;
+    }
+    .img2 { position: absolute;
+        right: -20px;
+        bottom: 0px;
     }
 }

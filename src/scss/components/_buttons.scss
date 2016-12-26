@@ -1,12 +1,13 @@
 .btn {
-    @include animate(color background-color bordercolor);
+    @include animate(color background-color bordercolor);padding-left: 3px ;padding-right: 3px;	
     &.btn-primary {
         min-width: 150px;
         text-transform: uppercase;
         text-align: center;
         display: inline-block;
         letter-spacing: 0px;
-        padding: 3px 0;
+        padding-top: 3px ;
+        padding-bottom: 3px;
         &:hover {
             background-color: $btn-primary-color;
             color: $white;
@@ -21,7 +22,7 @@
         	   background-color:  $white;
             color: $btn-primary-color;
             border-color:  $white;
-     
+
         }
     }
 }

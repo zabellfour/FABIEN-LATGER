@@ -1,0 +1,98 @@
+.section-nav {
+    padding: 73px 0 59px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include media('<desktop') {
+        padding: 40px 30px;
+    }
+    @include media('<tablet') {
+        padding: 20px 10px;
+        justify-content: center;
+    }
+    .btn {
+        @include media('<tablet') {
+            margin: 0 5%;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.fluid-col {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-color: #e6e6e6;
+    @include media('<tablet') {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    &:nth-child(2n) {
+        flex-direction: row-reverse;
+        @include media('<tablet') {
+            flex-direction: column-reverse;
+        }
+        .text-holder {
+            justify-content: flex-end;
+            .text-wrapper {
+                float: right;
+                padding: 20px 72px 20px 14px;
+                @include media('<desktop') {
+                    padding: 30px;
+                }
+                @include media('<tablet') {
+                    max-width: none;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+    .text-holder {
+        overflow: hidden;
+        line-height: 1.48;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .img-holder {
+        background-size: cover;
+        background-position: 50% 50%;
+        @include media('<tablet') {
+            height: 300px;
+        }
+        @include media('<phone') {
+            height: 200px;
+        }
+    }
+    .col-holder {
+        width: 50%;
+        @include media('>=widescreen') {
+            min-height: 425px
+        }
+        @include media('<tablet') {
+            width: 100%;
+        }
+    }
+    .text-wrapper {
+        h2 {
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+        max-width: 585px;
+        padding: 20px 15px 20px 50px;
+        text-align: justify;
+        width: 100%;
+        @include media('<widescreen') {
+            padding: 40px 15px 20px 40px;
+        }
+        @include media('<desktop') {
+            padding: 30px;
+        }
+        @include media('<tablet') {
+            max-width: none;
+            padding: 20px;
+        }
+    }
+}
