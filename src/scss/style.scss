@@ -1,7 +1,20 @@
+
+
 /* Vendors*/
 @import './bower/include-media/dist/include-media';
+@import 'vendors/fonts';
 
 /* Base modules*/
+@import 'base/bootstrap-custom';
 @import 'base/main';
+
 /* Components */
-@import 'components/starter-box';
+@import 'components/banner';
+@import 'components/short-info';
+@import 'components/buttons';
+@import 'components/accelerator';
+@import 'components/side-section';
+
+/* Layouts */
+@import 'layouts/header';
+@import 'layouts/footer'; 

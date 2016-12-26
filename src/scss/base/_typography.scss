@@ -1,50 +1,92 @@
-// Typography
-
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6,
-.h {
-  font-family: map-deep-get($headings, 'fonts', 'headings-font-family');
-  font-weight: bold;
-  margin: 0 0 0.5em;
-  color: map-deep-get($headings, 'fonts', 'headings-color');
-}
-
-h1, .h1 {
-  font-size: map-deep-get($headings, 'sizes', 'h1-font-size');
-}
-
-h2, .h2 {
-  font-size: map-deep-get($headings, 'sizes', 'h2-font-size');
-}
-
-h3, .h3 {
-  font-size: map-deep-get($headings, 'sizes', 'h3-font-size');
-}
-
-h4, .h4 {
-  font-size: map-deep-get($headings, 'sizes', 'h4-font-size');
-}
-
-h5, .h5 {
-  font-size: map-deep-get($headings, 'sizes', 'h5-font-size');
-}
-
-h6, .h6 {
-  font-size: map-deep-get($headings, 'sizes', 'h6-font-size');
-}
-
-p {
-  margin: 0 0 1em;
-}
-
-a {
-  color: map-get($base, 'base-link-color');
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-}
+    // Typography
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    .h {
+        margin: 0 0 10px;
+    }
+    
+    h1,
+    .h1 {
+        font-family: $font-family-monospace;
+        color: $white;
+        line-height: 1;
+        vertical-align: bottom;
+        letter-spacing: 1px;
+        @include media('<desktop') {
+            font-size: 60px;
+        }
+        @include media('<tablet') {
+            font-size: 40px;
+        }
+    }
+    
+    h2,
+    .h2 {
+        font-family: inherit;
+        color: inherit;
+        line-height: 1;
+        line-height: 1;
+        display: block;
+        margin: 0 0 10px;
+        text-transform: uppercase;
+        @include media('<desktop') {
+            font-size: 20px;
+        }
+        @include media('<tablet') {
+            font-size: 16px;
+        }
+    }
+    
+    h3,
+    .h3 {}
+    
+    h4,
+    .h4 {}
+    
+    h5,
+    .h5 {
+        font-size: 19px;
+    }
+    
+    h6,
+    .h6 {}
+    
+    p {
+        margin: 0 0 10px;
+    }
+    
+    a {}
+    
+    .text-row {
+        display: block;
+    }
+    
+    .separate {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 30px;
+        height: 30px;
+        height: 30px;
+        width: 4px;
+        vertical-align: middle;
+        background-color: $white;
+        border-radius: 3px;
+        margin: 0 5px;
+    }
+    
+    body {
+        @include media('<tablet') {
+            font-size: 14px;
+        }
+    }

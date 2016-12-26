@@ -1,0 +1,83 @@
+.short-info {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+    line-height: 1.7;
+    @include media('<desktop') {
+        padding: 30px 0;
+    }
+    @include media('<992px') {
+        text-align: left;
+    }
+    h2 {
+        font-weight: 800;
+        margin-bottom: 28px;
+    }
+    p {
+        margin-bottom: 53px;
+        @include media('<desktop') {
+            margin-bottom: 25px;
+        }
+    }
+    &.bg-pos1 {
+        img {
+            vertical-align: top;
+            @include media('<desktop') {
+                max-width: 30%;
+            }
+             @include media('<tablet') {
+            		display: none;	
+             
+             }
+            			
+        }
+        .img1 {
+            position: absolute;
+            top: -159px;
+            left: 9%;
+            z-index: 2;
+            @include media('<1800px') {
+                left: 0%;
+            }
+            @include media('<1500px') {
+                left: -200px;
+            }
+            @include media('<992px') {
+                left: auto;
+                right: -20px;
+            }
+        }
+        .img2 {
+            position: absolute;
+      top: 61px;
+    right: 214px;
+            z-index: 1;
+            @include media('<1800px') {
+                right: 0%;
+            }
+            @include media('<1500px') {
+                right: -100px;
+            }
+            @include media('<992px') {
+                left: auto;
+                right: -20px;
+                top: 55%;
+                transform: translateY(-50%);
+            }
+        }
+        .img3 {
+            position: absolute;
+            bottom: -288px;
+            right: 59%;
+            z-index: 3;
+            @include media('<1500px') {
+                bottom: -290px;
+            }
+            @include media('<992px') {
+                left: auto;
+                right: 20px;
+                bottom: -200px;
+            }
+        }
+    }
+}

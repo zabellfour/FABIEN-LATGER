@@ -1,0 +1,91 @@
+#footer {
+    background-color: $brand-primary;
+    border-top: 30px solid #464547;
+    padding: 28px 0;
+    color: $white;
+    text-align: center;
+    @include media('<desktop') {
+        padding: 15px 0;
+        border-top: 10px solid #464547;
+    }
+    p{
+    	margin-bottom: 9px;	
+    }
+    .nav-list {
+        @extend %listreset;
+        margin-bottom: 106px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media('<tablet') {
+            align-items: flex-start;
+            margin-bottom: 30px;	
+        }
+        @include media('<phone') {
+            flex-wrap: wrap;
+            margin-bottom: 15px;	
+        }
+        li {
+            padding: 0 3.5%;
+            @include media('<tablet') {
+                padding: 0 5px;
+            }
+            @include media('<phone') {
+                width: 100%;
+                text-align: left;
+                padding: 0;
+            }
+        }
+    }
+    .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+          line-height: 1.1;
+        @include media('<tablet') {
+            flex-wrap: wrap;
+      
+
+        }
+    }
+    .contact-data {
+        max-width: 195px;
+        text-align: left;
+        @include media('<tablet') {
+            width: 50%;
+            max-width: 50%;
+            order: 1;
+        }
+         @include media('<phone') {
+                width: 100%;
+                text-align: left;
+                max-width: 100%;
+            }
+    }
+    .logo {
+        @include media('<tablet') {
+            order: 3;
+            width: 100%;
+            text-align: center;
+            padding-top: 20px;
+        }
+    }
+    .tag-cloud {
+        max-width: 215px;
+        text-align: right;
+        @include media('<tablet') {
+            width: 50%;
+            max-width: 50%;
+            order: 2;
+        }
+         @include media('<phone') {
+        		width: 100%;
+        		text-align:left;	
+         
+         }
+        			
+    }
+    address{
+    	line-height: inherit;margin-bottom: 0;
+    }
+}

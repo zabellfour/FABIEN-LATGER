@@ -1,10 +1,28 @@
-import HP from './modules/helpers';
+(function($) {
 
-(function ($) {
 
-  // When DOM is ready
-  $(function () {
-    HP.random(10, 20);
-  });
+    $(function() {
+        smoothScroll.init({
+            selector: '[data-scroll]',
+            speed: 800
+        });
 
+    });
+    $(function() {
+        $('.sh-holder').matchHeight({
+            byRow: false,
+            property: 'height',
+            target: null,
+            remove: false
+
+        });
+       
+          $('.sh-column').matchHeight({
+            byRow: false,
+            property: 'height',
+            target: null,
+            remove: false
+
+        });
+    });
 }(jQuery));

@@ -1,0 +1,135 @@
+#header {
+    background-color: $gray80;
+    background-image: url('../images/bg-header.jpg');
+    background-size: cover;
+    padding: 45px 0 39px;
+    background-position: 50% 50%;
+    text-align: center;
+    @include media('<widescreen') {
+        padding: 30px 0 25px;
+    }
+    @include media('<desktop') {
+        padding: 15px 0 10px;
+    }
+    @include media('<tablet') {
+        padding: 5px 0;
+    }
+    .navbar-header {
+        text-align: center;
+        width: 100%;
+        .logo {
+            @include animate(opacity);
+            float: none;
+            display: inline-block;
+            opacity: 1;
+            &:hover {
+                opacity: .8;
+            }
+            @include media('<widescreen') {
+                max-width: 200px;
+                display: block;
+                margin: 0 auto;
+            }
+            @include media('<desktop') {
+                max-width: 170px;
+            }
+            @include media('<tablet') {
+                max-width: 130px;
+                float: left;
+            }
+            @include media('<phone') {
+                max-width: 100px;
+            }
+            img {
+                vertical-align: top;
+                @include media('<widescreen') {
+                    width: 100% !important;
+                    height: auto !important;
+                }
+            }
+        }
+        button {
+            margin-top: 10px;
+            border-radius: 0;
+            border-width: 2px;
+            .icon-bar {
+                height: 3px;
+            }
+            @include media('<phone') {
+                margin-top: 3px;
+            }
+        }
+    }
+    .navbar-brand {
+        padding-bottom: 36px;
+        @include media('<widescreen') {
+            padding: 0 0 20px;
+        }
+        @include media('<desktop') {
+            padding: 0 0 15px;
+        }
+        @include media('<tablet') {
+            padding: 0 0 0px;
+        }
+    }
+    .navbar-collapse {
+        @include media('<tablet') {
+            margin-top: 10px;
+        }
+        .navbar-nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            @include media('<tablet') {
+                flex-wrap: wrap;
+            }
+            li {
+                padding: 0 2.3%;
+                @include media('<widescreen') {
+                    padding: 0 1%;
+                }
+                @include media('<desktop') {
+                    padding: 0;
+                }
+                @include media('<tablet') {
+                    width: 100%;
+                }
+                &.active a:after {
+                    opacity: 1;
+                }
+            }
+            a {
+                @include animate(color);
+                position: relative;
+                @include media('<desktop') {
+                    font-size: 18px;
+                }
+                @include media('<tablet') {
+                    font-size: 16px;
+                }
+                @include media('<tablet') {
+                    padding: 5px;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    opacity: 0;
+                    left: 0;
+                    display: inline-block;
+                    right: 0;
+                    bottom: -6px;
+                    height: 9px;
+                    background-image: url(../images/radial.png);
+                    background-size: 85px 9px;
+                    background-position: 50% 0;
+                    background-repeat: no-repeat;
+                    @include media('<tablet') {
+                        background-size: 70px 6px;
+                        bottom: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
