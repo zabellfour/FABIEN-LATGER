@@ -1,0 +1,62 @@
+.gallery-section {
+    background-image: url(../images/bg2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+padding: 104px 0 60px;
+     @include media('<desktop') {
+    	padding: 60px 0 30px;
+     
+     }
+    		
+}
+
+.carousel-holder {
+    background-color: $brand-primary;
+    padding: 64px 30px 51px;
+    @include media('<desktop') {
+        padding: 30px 10px;
+    }
+    .owl-carousel {
+        max-width: 755px;
+        width: 100%;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+    .owl-prev,
+    .owl-next {
+        @include animate(opacity);
+        background-color: transparent !important;
+        background-image: url('../images/chevron.png') !important;
+        background-repeat: no-repeat;
+        background-size: 100% 100% !important;
+        height: 43px !important;
+        width: 43px !important;
+        transform: rotate(90deg) !important;
+        font-size: 0 !important;
+        color: transparent !important;
+        position: absolute;
+        top: 50%;
+        left: -78px;
+        bottom: 0;
+        margin-top: -22px !important;
+         @include media('<desktop') {
+        	left: 20px !important;
+         
+         }
+        		
+        &:hover {
+            opacity: .8;
+        }
+    }
+    .owl-next {
+        transform: rotate(-90deg) !important;
+        left: auto !important;
+        right: -78px !important;
+         @include media('<desktop') {
+        	right: 20px !important;
+         left: auto !important;
+         }
+    }
+}
