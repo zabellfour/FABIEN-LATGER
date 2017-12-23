@@ -13,6 +13,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            letter-spacing: 3px;
               @include media('<widescreen') {
             font-size: 18px;
         }
@@ -49,7 +50,16 @@
         }
     }
     &.vh100 {
-        height: 100vh;
+        height: calc(100vh - 291px);
+        @include media('<widescreen') {
+            height: calc(100vh - 200px);
+        }
+        @include media('<desktop') {
+            height: calc(100vh - 150px);
+        }
+        @include media('<tablet') {
+            height: calc(100vh - 72px);
+        }
     }
     &.vh490 {
         height: 490px;

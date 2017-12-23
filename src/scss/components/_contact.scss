@@ -1,0 +1,193 @@
+.contact-page {
+	margin-top: 48px;
+	margin-bottom: 42px;
+	@include media('<tablet') {
+        margin-top: 15px;
+    }
+	.fluid-col {
+		background: transparent;
+		.col-holder {
+        	@include media('>=widescreen') {
+            min-height: 366px
+        	}
+    	}
+	}
+	.text-side {
+		padding-left: 30px;
+		@include media('<tablet') {
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+		h2 {
+			margin-bottom: 20px;
+			@include media('<tablet') {
+            	margin-bottom: 10px;
+        	}
+		}
+		p {
+			@include media('<tablet') {
+            	margin-bottom: 0px;
+        	}
+		}
+	}
+	strong,span {
+		display: inline-block;
+		width: 100%;
+	}
+	strong {
+		line-height: 1.2;
+	}
+	.divider {
+		height: 2px;
+		width: 80%;
+		background-color: $gray80;
+		@include media('<widescreen') {
+           width: 100%;
+        }
+        @include media('<tablet') {
+           width: 50%;
+        }
+        @include media('<phone') {
+           width: 90%;
+        }
+	}
+	.contact-info {
+		@extend %listreset;
+		.tel {
+			color: $gray-base;
+			font-size: 30px;
+			@include media('<desktop') {
+            font-size: 20px;
+        	}
+        	@include media('<tablet') {
+            font-size: 16px;
+        	}
+        	&.bold {
+        		font-weight: 900;
+        	}
+			&:hover {
+				color: $gray70;
+			}
+		}
+		.mail {
+			color: $gray-base;
+			&:hover {
+				color: $gray70;
+			}
+		}
+		address {
+			margin-bottom: 0;
+			line-height: 1;
+			p {
+				line-height: 1;
+				display: inline-block;
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+}
+.form-section {
+	padding-bottom: 72px;
+	background-size: cover;
+    background-position: 50% 50%;
+	@include media('<tablet') {
+        		padding-bottom: 35px;
+     		}
+	.form-group {
+		@extend %clearfix;
+		display: flex;
+		justify-content: space-between;
+		background-color: $gray-base;
+		padding: 70px 40px 58px 90px;
+		box-shadow: 3px 6px 30px 3px rgba(0,0,0,0.75);
+		@include media('<widescreen') {
+			padding: 70px 40px 58px 65px;
+     	}
+		@media screen and (max-width: 991px) {
+          	flex-direction: column;
+          	padding: 26px 15px;
+        }
+	}
+	.group-column {
+		width: 326px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@include media('<widescreen') {
+        		width: 280px;
+     		}
+     	@media screen and (max-width: 991px) {
+          		width: 100%;
+          		margin-bottom: 26px;
+        	}
+	}
+	.form-control {
+		height: auto;
+		padding: 12px 23px;
+		font-size: 19px;
+		border: 2px solid $white;
+		border-radius: 0;
+		outline: none;
+		box-shadow: 0px 0px 0px $white;
+		background-color: $gray-base;
+		transition: all .5s;
+		@media screen and (max-width: 991px) {
+          		margin-bottom: 15px;
+        	}
+		@include media('<tablet') {
+        		font-size: 16px;
+        		padding: 9px 16px;
+     		}
+		&:last-child {
+			margin-bottom: 0;
+			@include media('<desktop') {
+     
+     		}
+     		@include media('<tablet') {
+        		margin-bottom: 15px
+     		}
+		}
+		&:focus {
+			background-color: $white;
+			color: $gray-base;
+		}
+		@include placeholder {
+			color: $white;
+		}
+	}
+	textarea {
+		resize: none;
+		margin-bottom: 0;
+	}
+	.button-area {
+		display: flex;
+		align-items: flex-end;
+		@media screen and (max-width: 991px) {
+          		justify-content: center;
+        	}
+		.btn {
+		padding: 13px 70px;
+		font-size: 19px;
+		border: 2px solid $white;
+		border-radius: 0;
+		outline: none;
+		box-shadow: inset 0 2px 2px rgba(0,0,0,.075);
+		background-color: $gray-base;
+		color: $white;
+		text-transform: uppercase;
+		transition: all .3s;
+		@include media('<tablet') {
+        		font-size: 16px;
+        		padding: 9px 70px;
+     		}
+     	@include media('<phone') {
+        		font-size: 16px;
+        		padding: 9px 35px;
+     		}
+		&:hover {
+				background-color: $gray70;
+			} 
+		}
+	}
+}

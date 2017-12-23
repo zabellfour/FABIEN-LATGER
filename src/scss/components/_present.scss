@@ -1,0 +1,60 @@
+.img-bg {
+	padding: 70px 0 60px 0;
+	background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+	.text-row {
+		margin: 0 auto;
+		width: 33%;
+		text-align: center;
+		@media screen and (max-width: 991px) {
+          	width: 43%;
+        }
+	}
+	strong.h2 {
+		font-weight: 900;
+	}
+	strong, span {
+		margin-bottom: 0;
+	}
+}
+.presentation-page {
+	.bg-pos2 {
+		.img1 {
+	    position: absolute;
+	    top: -25%;
+	    left: -2.5%;
+	    right: 0;
+	    bottom: 0;
+		}
+	}
+	.gray-bg {
+		background-color: #e6e6e6;
+	}
+	.fluid-col {
+		.text-row {
+			line-height: 1.2;
+		}
+		.text-side {
+			padding-top: 50px;
+			@include media('<tablet') {
+            padding-top: 15px;
+        	}
+			.text-wrapper {
+				padding: 0;
+				padding-right: 30px;
+				text-align: justify;
+				@include media('<tablet') {
+            		padding-right: 0;
+        		}
+				p {
+					margin-bottom: 15px;
+					letter-spacing: -0.5px;
+				}
+			}
+		}
+		.100vh {
+			height: 100vh;
+		}
+	}
+}
